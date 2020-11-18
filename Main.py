@@ -1,6 +1,8 @@
 import random
+import sys
 from MergeSort import *
 from QuickSort import *
+sys.setrecursionlimit(1_000)
 
 # Метод по созданию упорядоченных списков
 def make_consistent_list(list_range):
@@ -18,12 +20,12 @@ def make_random_list(list_range):
 
 # Создаем наши списки и помещаем их в другой список для более удобного взаимодействия с ними
 listOfLists = []
-listOfLists.insert(0, make_random_list(100))
-listOfLists.insert(1, make_random_list(1_000))
-listOfLists.insert(2, make_random_list(10_000))
-listOfLists.insert(3, make_consistent_list(100))
-listOfLists.insert(4, make_consistent_list(1_000))
-listOfLists.insert(5, make_consistent_list(10_000))
+listOfLists.insert(0, make_random_list(10_000))
+listOfLists.insert(1, make_random_list(100_000))
+listOfLists.insert(2, make_random_list(1_000_000))
+listOfLists.insert(3, make_consistent_list(10_000))
+listOfLists.insert(4, make_consistent_list(100_000))
+listOfLists.insert(5, make_consistent_list(1_000_000))
 
 # Начинаем сортировать списки
 counter = 0
@@ -33,6 +35,6 @@ for i in listOfLists:
     elif counter == 3:
         print("\n\n##### Consistent Lists #####")
     else: print("----------")
-    #print(quickSort(i.copy()))
+    #print(quickSort(i.copy())
     #print(mergeSort(i.copy()))
     counter += 1

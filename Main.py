@@ -35,6 +35,6 @@ for i in listOfLists:
     elif counter == 3:
         print("\n\n##### Consistent Lists #####")
     else: print("----------")
-    #print(quickSort(i.copy())
-    print(mergeSortTimer(i.copy()))
+    print(QuickSortik(i.copy()))
+    #print(mergeSortTimer(i.copy()))
     counter += 1
